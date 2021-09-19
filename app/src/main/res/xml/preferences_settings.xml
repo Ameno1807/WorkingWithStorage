@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory android:title="Sort">
+
+        <ListPreference
+            android:defaultValue="TITLE"
+            android:entries="@array/sort_by"
+            android:entryValues="@array/sort_by_values"
+            android:key="pref_sort_by"
+            android:summary="%s"
+            android:title="Sort by" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Database">
+        <SwitchPreference
+            android:defaultValue="false"
+            app:key="switch"
+            app:title="Room Database/SQLite"/>
+    </PreferenceCategory>
+</PreferenceScreen>

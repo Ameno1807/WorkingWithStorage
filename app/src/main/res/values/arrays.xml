@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sort by -->
+    <string-array name="sort_by">
+        <item>Man</item>
+        <item>Woman</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="sort_by_values">
+        <item>MAN</item>
+        <item>WOMAN</item>
+        <item>ALL</item>
+    </string-array>
+
+    <!-- sort order -->
+    <string-array name="db_mode">
+        <item>Room</item>
+        <item>SQLite</item>
+    </string-array>
+
+    <string-array name="db_mode_values">
+        <item>ROOM</item>
+        <item>SQLITE_OPEN_HELPER</item>
+    </string-array>
+
+    <string-array name="gender_choice">
+        <item>Man</item>
+        <item>Woman</item>
+    </string-array>
+</resources>

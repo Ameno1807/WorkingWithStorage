@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/fragmentPersonList">
+
+    <fragment
+        android:id="@+id/fragmentPersonList"
+        android:name="ru.jelezov.workingwithstorage.ui.personList.FragmentPersonList"
+        android:label="Person List" >
+        <action
+            android:id="@+id/action_fragmentPersonList_to_fragmentAddPerson"
+            app:destination="@id/fragmentAddPerson" />
+        <action
+            android:id="@+id/action_fragmentPersonList_to_fragmentUpdatePerson"
+            app:destination="@id/fragmentUpdatePerson" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddPerson"
+        android:name="ru.jelezov.workingwithstorage.ui.addPerson.FragmentAddPerson"
+        android:label="Add Person" >
+        <action
+            android:id="@+id/action_fragmentAddPerson_to_fragmentPersonList"
+            app:destination="@id/fragmentPersonList" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.jelezov.workingwithstorage.ui.settingsFragment.FragmentSettings"
+        android:label="Settings"/>
+
+    <action android:id="@+id/open_settings_fragment"
+        app:destination="@id/settingsFragment"/>
+    <fragment
+        android:id="@+id/fragmentUpdatePerson"
+        android:name="ru.jelezov.workingwithstorage.ui.updatePerson.FragmentUpdatePerson"
+        android:label="Update Person">
+        <action
+            android:id="@+id/action_fragmentUpdatePerson_to_fragmentPersonList"
+            app:destination="@id/fragmentPersonList" />
+        <argument
+            android:name="currentUser"
+            app:argType="ru.jelezov.workingwithstorage.model.PersonModel" />
+
+    </fragment>
+
+</navigation>
